@@ -19,7 +19,10 @@ module ESP32
         output:   ESP32::GPIO::OUTPUT,
         inout:    ESP32::GPIO::INPUT_OUTPUT
       }
-
+      
+      HIGH = ESP32::GPIO::HIGH
+      LOW  = ESP32::GPIO::LOW
+      
       attr_reader :pin
       def initialize pin, mode = :input
         mode = PIN_MODE[mode] unless mode.is_a?(Integer)
